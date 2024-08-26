@@ -208,16 +208,16 @@
 
         // Function to add a marker at a specific point on the map
         const instructions = [
-            { title: "Current Time", info: "2:44 PM" },
-            { title: "Address of Origin", info: "2764 W Lake of the Isles Pkwy, Minneapolis, MN 55416" },
-            { title: "Address of Destination", info: "1866 Dudley Ave, St Paul, MN 55108" },
+            { title: "Current Time", info: "2:44 PM." },
+            { title: "Address of Origin", info: "2764 W Lake of the Isles Pkwy, Minneapolis, MN 55416." },
+            { title: "Address of Destination", info: "1866 Dudley Ave, St Paul, MN 55108." },
             { title: "Distance of Destination", info: "0" },
             { title: "Estimated Time to Destination", info: "0" },
-            { title: "State of Charge of Battery", info: "43% Charge" },
-            { title: "Range of Current Battery", info: "129 Minutes" },
-            { title: "Estimated Drive-distance with Current Charge", info: "97 Miles" },
-            { title: "Type of Chargin Socket", info: "J1772" },
-            { title: "kW Needed to Fully Charge Your Car", info: "34.2 kW" }
+            { title: "State of Charge of Battery", info: "43% Charge." },
+            { title: "Range of Current Battery", info: "129 Minutes." },
+            { title: "Estimated Drive-distance with Current Charge", info: "97 Miles." },
+            { title: "Type of Chargin Socket", info: "J1772." },
+            { title: "kW Needed to Fully Charge Your Car", info: "34.2 kW." }
         ];
 
 
@@ -248,16 +248,16 @@
                         { type: 'J1772', value: '4 available' }
                     ],
 
-                energySource: 'Energy Breakdown: 55% Grid, 45% Renewable',
+                energySource: '55% Grid, 45% Renewable',
 
                 chargingFee: '$1.25/$0.25',
                 chargingFeeRate: 'per kWh in the day/night',
                 parkingFee: 'free',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes <br><br> There is a coffee shop in walking distance... 0.3 miles',
-                grocery: 'Yes <br><br> There is a grocery store in walking distance... 0.01 miles',
-                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance... 0.3 miles',
+                coffee: 'Yes <br><br> There is a coffee shop in walking distance 0.3 miles away.',
+                grocery: 'Yes <br><br> There is a grocery store in walking distance 0.01 mile away.',
+                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance 0.3 miles away.',
                 
                 rating: '★ ★ ★ ✰ ✰',
                 ratingNum: '23'
@@ -287,7 +287,7 @@
                         { type: 'J1772', value: '4 available' }
                     ],    
 
-                energySource: 'Energy Breakdown: 36% Grid, 64% Renewable',
+                energySource: '36% Grid, 64% Renewable',
 
                 chargingFee: '$1.25/$0.25',
                 chargingFeeRate: 'per kWh in the day/night',
@@ -295,9 +295,9 @@
                 parkingFee: 'free',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes <br><br> There is a coffee shop in walking distance... 0.1 miles',
-                grocery: 'Yes <br><br> There is a grocery store in walking distance... 0.4 miles',
-                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance... 0.5 miles',
+                coffee: 'Yes <br><br> There is a coffee shop in walking distance 0.1 mile away.',
+                grocery: 'Yes <br><br> There is a grocery store in walking distance 0.4 miles away.',
+                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance 0.5 miles away.',
                 
                 rating: '★ ✰ ✰ ✰ ✰',  
                 ratingNum: '14'
@@ -531,7 +531,7 @@
 
                     <button class="popup-button" onclick="showMoreInfo('${station.name}', 'energySource', '${station.energySource}', '${boxId}')">Energy Source at Station</button>
                     <button class="popup-button" onclick="showMoreInfo('${station.name}', 'fees', '${station.chargingFee} <br><br> The price ${station.chargingFeeRate} is ${station.chargingFee}', '${boxId}')">Cost to Charge</button>
-                    <button class="popup-button" onclick="showMoreInfo('${station.name}', 'parking', '<b>Cost to park at station:</b> ${station.parkingFee}. <br><br> The price of parking your car at the charging station ${station.parkingFeeRate} is ${station.parkingFee}.', '${boxId}')">Cost to Park at Station</button>
+                    <button class="popup-button" onclick="showMoreInfo('${station.name}', 'parking', '${station.parkingFee} parking <br><br> The price of parking your car at the charging station ${station.parkingFeeRate} is... ${station.parkingFee}', '${boxId}')">Cost to Park at Station</button>
                     <button class="popup-button" onclick="showMoreInfo('${station.name}', 'coffee', '${station.coffee}', '${boxId}')">Coffee Shop</button>
                     <button class="popup-button" onclick="showMoreInfo('${station.name}', 'grocery', '${station.grocery}', '${boxId}')">Grocery Store</button>
                     <button class="popup-button" onclick="showMoreInfo('${station.name}', 'sportsClothes', '${station.sportsClothes}', '${boxId}')">Sport/Clothing Store</button>
@@ -728,8 +728,8 @@
 
         // Function to update instructions with route details
         function updateInstructions(routeDetails) {
-            instructions[3].info = `${routeDetails.distance.toFixed(2)} miles`;
-            instructions[4].info = `${routeDetails.time} minutes`;
+            instructions[3].info = `${routeDetails.distance.toFixed(2)} miles.`;
+            instructions[4].info = `${routeDetails.time} minutes.`;
         }
 
         // Function to get the route to travel between any route type
